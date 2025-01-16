@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Breve</title>
+    <!-- Link para a fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* Fundo branco */
+            overflow: hidden; /* Oculta barra de rolagem */
+            position: relative; /* Permite o posicionamento absoluto do botão */
+        }
+
+        .mensagem {
+            font-size: 5em; /* Tamanho da fonte aumentado */
+            color: seagreen; /* Cor seagreen */
+            font-family: 'Roboto', sans-serif; /* Fonte elegante */
+            white-space: nowrap; /* Para evitar que a mensagem quebre a linha */
+            animation: mover 5s linear infinite; /* Animação */
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateX(100%); /* Começa fora da tela à direita */
+            }
+            100% {
+                transform: translateX(-100%); /* Termina fora da tela à esquerda */
+            }
+        }
+
+        /* Estilo do botão */
+        .botao-voltar {
+            position: absolute; /* Posiciona o botão no canto */
+            top: 20px; /* Distância do topo */
+            left: 20px; /* Distância da esquerda */
+            background-color: seagreen; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Sem borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 1.2em; /* Tamanho da fonte do botão */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        .botao-voltar:hover {
+            background-color: #4cae4c; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="mensagem">Em Breve</div>
+    <button class="botao-voltar" onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>
